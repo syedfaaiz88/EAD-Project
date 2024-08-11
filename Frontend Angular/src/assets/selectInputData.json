@@ -1,0 +1,8 @@
+[
+    {
+        "Genders":["Male","Female","Other"],
+        "City":["Lahore","Islamabad","Karachi","Multan","Gujrat"],
+        "Department":["Computer Science","Pharmacy","Arts","Psychology"],
+        "DegreeTitle":["BS","MS","M.Phil","Phd"]
+    }
+]

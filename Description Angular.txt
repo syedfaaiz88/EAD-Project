@@ -1,0 +1,8 @@
+1. I install Node  
+2. I install angular cli using "npm install -g @angular/cli@latest"
+3. I make a folder name "Project" 
+4. I make angular project using "ng new FrontEnd" in my "Project" Folder
+5. I make some components (input, select-input, date-input, nav-bar, button)
+6. I install bootstrap using "npm install bootstrap --save"
+7. I install chart using "npm install charts.js"
+8. I install bootstrap icons for page navigation arrows using "npm install bootstrap-icons"

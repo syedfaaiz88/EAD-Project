@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIS</title>
+    <script src="jQuery/jQuery.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+
+</head>
+
+<body>
+    <div class="container bg-black">
+        <div class="left bg-grey rounded border-dark">
+            <img class="cross" src="Svgs/cross.svg">
+            <ul>
+                <li> <a href="/">Home</a> </li>
+                <li> <a href="addStudentPage.html">Add Student</a> </li>
+                <li> <a href="dashboard.html">Dashboard</a> </li>
+            </ul>
+            <button id="light-mode">Light Mode</button>
+        </div>
+        <div class="right bg-grey rounded p-1 border-dark">
+            <img class="hamburger" src="Svgs/hamburger.svg">
+            <div class="heading">
+                <h1>Dashboard</h1>
+            </div>
+            <div id="distinctInterests">
+                
+            </div>
+            <div id="charts-container">
+
+                <div class="chart-container">
+                    <h1>Ages</h1>
+                    <canvas id="ageChart" class="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h1>Genders</h1>
+                    <canvas id="genderChart" class="barChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h1>Departments</h1>
+                    <canvas id="departmentChart" class="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h1>Degree</h1>
+                    <canvas id="degreeChart" class="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h1>Interests</h1>
+                    <canvas id="interestChart" class="barChart"></canvas>
+                </div>            
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<script src="dashboard.js"></script>
+
+</html>

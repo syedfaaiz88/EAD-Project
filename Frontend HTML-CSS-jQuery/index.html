@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIS</title>
+    <script src="jQuery/jQuery.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+
+</head>
+
+<body>
+
+    <div class="container bg-black">
+        <div class="left bg-grey rounded border-dark">
+            <img class="cross" src="Svgs/cross.svg">
+            <ul>
+                <li> <a href="/">Home</a> </li>
+                <li> <a href="addStudentPage.html">Add Student</a> </li>
+                <li> <a href="dashboard.html">Dashboard</a> </li>
+            </ul>
+            <button id="light-mode">Light Mode</button>
+        </div>
+        <div class="right bg-grey rounded p-1 border-dark">
+            <img class="hamburger" src="Svgs/hamburger.svg">
+            <div class="heading">
+                <h1>Students List</h1>
+            </div>
+            <table class="table">
+                <thead class="bg-light-grey">
+                    <tr>
+                        <!-- <th>ID <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th> -->
+                        <th>ROLL#<span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>NAME <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>EMAIL <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>DEPARTMENT <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>DEGREE <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <!-- <th>DOB <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th> -->
+                        <!-- <th>END <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th> -->
+                        <!-- <th>START <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th> -->
+                        <th>CITY <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>INTEREST <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <!-- <th>SUBJECT <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th> -->
+                        <th>AGE <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>GENDER <span class="arrow">&#9650;</span><span class="arrow">&#9660;</span></th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentsBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

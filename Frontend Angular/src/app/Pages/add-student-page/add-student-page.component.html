@@ -1,0 +1,118 @@
+<div class="row">
+  <div class="col-12 m-auto">
+    <div class="card m-auto card-form mt-3">
+      <div class="card-body">
+        <form id="addStudent" [formGroup]="addStudentForm" (ngSubmit)="onSubmit()">                
+        <div class="row">
+          <div class="col-md-4">
+            <app-input [label]="'Full Name'" [id]="'fullNameInput'" type="text" [controlName]="'fullName'" [parentForm]="addStudentForm"></app-input>
+            <span *ngIf="!fullName.valid && fullName.touched" class="error-block">
+              Please Provide Name.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-input [label]="'Roll Number'" [id]="'rollNoInput'" type="text" [controlName]="'rollNo'" [parentForm]="addStudentForm"></app-input>
+            <span *ngIf="!rollNo.valid && rollNo.touched" class="error-block">
+              Please Provide Roll Number.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-input [label]="'Email Address'" [id]="'emailInput'" type="text" [controlName]="'email'" [parentForm]="addStudentForm"></app-input>
+            <span *ngIf="!email.valid && email.touched" class="error-block">
+              <span *ngIf="email.hasError('required')">
+                Please Provide Email ID.
+              </span>
+              <span *ngIf="email.hasError('email')">
+                Please Provide Valid Email ID.
+              </span>
+            </span>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <app-select-input [label]="'Gender'" [id]="'genderInput'" [list]="selectInputData[0]?.Genders" [controlName]="'gender'" [parentForm]="addStudentForm"></app-select-input>
+            <span *ngIf="!gender.valid && gender.touched" class="error-block">
+              Please Select Gender.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-select-input [label]="'City'" [id]="'cityInput'" [list]="selectInputData[0]?.City" [controlName]="'city'" [parentForm]="addStudentForm"></app-select-input>
+            <span *ngIf="!city.valid && city.touched" class="error-block">
+              Please Select City.
+            </span>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <app-select-input [label]="'Interest'" [id]="'interestInput'" [list]="distinctInterests" [controlName]="'interest'" [parentForm]="addStudentForm"></app-select-input>
+
+            <span *ngIf="!interest.valid && interest.touched" class="error-block">
+              Please Select Interest.
+            </span>
+          </div>
+
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <app-date-input label="Date Of Birth" [id]="'dobInput'" [controlName]="'dob'" [parentForm]="addStudentForm"></app-date-input>
+            <span *ngIf="!dob.valid && dob.touched" class="error-block">
+              Please Select Date Of Birth.
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <app-select-input label="Department" [id]="'departmentInput'" [list]="selectInputData[0]?.Department" [controlName]="'department'" [parentForm]="addStudentForm"></app-select-input>
+            <span *ngIf="!department.valid && department.touched" class="error-block">
+              Please Select Department.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-select-input label="Degree Title" [id]="'degreeInput'" [list]="selectInputData[0]?.DegreeTitle" [controlName]="'degree'" [parentForm]="addStudentForm"></app-select-input>
+            <span *ngIf="!degree.valid && degree.touched" class="error-block">
+              Please Select Degree Title.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-input label="Subject" type="text" [id]="'subjectInput'" [controlName]="'subject'" [parentForm]="addStudentForm"></app-input>
+            <span *ngIf="!subject.valid && subject.touched" class="error-block">
+              Please Provide Subject.
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <app-date-input label="Start Date" [id]="'startInput'" [controlName]="'start'" [parentForm]="addStudentForm"></app-date-input>
+            <span *ngIf="!start.valid && start.touched" class="error-block">
+              Please Select Start Date.
+            </span>
+          </div>
+          <div class="col-md-4">
+            <app-date-input label="End Date" [id]="'endInput'" [controlName]="'end'" [parentForm]="addStudentForm"></app-date-input>
+            <span *ngIf="!end.valid && end.touched" class="error-block">
+              Please Select End Start Date.
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group col-12 mt-4 d-flex justify-content-end">
+          <button type="submit" class="btn btn-success" [disabled]="!addStudentForm.valid">Save</button>
+          <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+        </div>
+        <div *ngIf="submissionSuccess" style="color: green;">
+          <p>Form submitted successfully!</p>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+  
+
+

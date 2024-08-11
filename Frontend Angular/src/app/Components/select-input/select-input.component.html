@@ -1,0 +1,8 @@
+<div class="mb-3" [formGroup]="parentForm">
+    <label [for]="id" class="form-label">{{label}}</label>
+    <br>
+    <select class="form-select" [id]="id" aria-label="Default select example" [formControlName]="controlName">
+        <option selected>{{selectedInput}}</option>
+        <option *ngFor = "let item of list">{{item}}</option>
+    </select>
+</div>

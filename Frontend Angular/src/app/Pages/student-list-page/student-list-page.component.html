@@ -1,0 +1,35 @@
+<table class="table">
+  <thead class="table-secondary ">
+    <tr>
+      <th scope="col"
+        *ngFor="let column of ['id', 'name', 'rollNumber', 'department', 'degree', 'dob', 'city', 'interest']">
+        {{column}}
+        <button type="button" class="btn btn-link btn-sm" style="margin-right: -15px;"
+          (click)="sortField = column; sortDirection = 'asc'">🔼</button>
+        <button type="button" class="btn btn-link btn-sm"
+          (click)="sortField = column; sortDirection = 'desc'">🔽</button>
+
+      </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentData | sort:[sortField, sortDirection]">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.rollNumber}}</td>
+      <td>{{student.department}}</td>
+      <td>{{student.degree}}</td>
+      <td>{{student.dob}}</td>
+      <td>{{student.city}}</td>
+      <td>{{student.interest}}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <a class="btn btn-primary btn-sm" routerLinkActive="active" routerLink="/view-student/{{student.id}}">View</a>
+          <a class="btn btn-warning btn-sm" routerLinkActive="active" routerLink="/add-student/{{student.id}}">Edit</a>
+          <button type="button" class="btn btn-danger btn-sm" (click)="deleteStudent(student.id)">Delete</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

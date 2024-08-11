@@ -1,0 +1,26 @@
+.card-form {
+    width: 95%;
+    max-width: 700px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow darkness */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary:disabled {
+    cursor: not-allowed;
+}
+
+.error-block {
+    color: #dc3545;
+    font-size: 80%;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-group.col-12 button {
+    margin-right: 8px;
+}
